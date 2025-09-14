@@ -4,7 +4,6 @@ import Game from '../modules/Game.class.js';
 
 const game = new Game();
 
-// const buttonStart = document.querySelector('.start');
 const gameScore = document.querySelector('.game-score');
 const gameStatusContainer = document.querySelector('.message-container');
 const table = document.querySelector('.game-field');
