@@ -27,7 +27,7 @@ function updateGameMessage(type) {
     case 'hide':
     default:
       gameStatusContainer.classList.add('hidden');
-      break;
+      break; //
   }
 }
 
