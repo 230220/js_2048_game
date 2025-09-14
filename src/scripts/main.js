@@ -71,6 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
   buttonStart.addEventListener('click', () => {
     game.start();
     render();
+
+    buttonStart.classList.add('hidden');
+  });
+
+  const buttonRestart = document.querySelector('.restart');
+
+  buttonRestart.addEventListener('click', () => {
+    game.restart();
+    render();
   });
 });
 
