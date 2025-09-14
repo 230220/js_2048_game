@@ -22,7 +22,7 @@ class Game {
    */
   constructor(initialState) {
     // eslint-disable-next-line no-console
-    this.size = 4; //
+    this.size = 4;
     this.score = 0;
 
     this.state =
