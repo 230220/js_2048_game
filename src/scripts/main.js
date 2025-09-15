@@ -67,15 +67,15 @@ function render() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const buttonStart = document.querySelector('.start');
+  const buttonRestart = document.querySelector('.restart');
 
   buttonStart.addEventListener('click', () => {
     game.start();
     render();
 
     buttonStart.classList.add('hidden');
+    buttonRestart.classList.remove('hidden');
   });
-
-  const buttonRestart = document.querySelector('.restart');
 
   buttonRestart.addEventListener('click', () => {
     game.restart();
@@ -86,14 +86,19 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('keydown', (e) => {
   let moved = false;
 
-  if (e.key === 'ArrowLeft') {
-    moved = game.moveLeft();
-  } else if (e.key === 'ArrowRight') {
-    moved = game.moveRight();
-  } else if (e.key === 'ArrowUp') {
-    moved = game.moveUp();
-  } else if (e.key === 'ArrowDown') {
-    moved = game.moveDown();
+  switch (e.key) {
+    case 'ArrowLeft':
+      moved = game.moveLeft();
+      break;
+    case 'ArrowRight':
+      moved = game.moveRight();
+      break;
+    case 'ArrowUp':
+      moved = game.moveUp();
+      break;
+    case 'ArrowDown':
+      moved = game.moveDown();
+      break;
   }
 
   if (moved) {
