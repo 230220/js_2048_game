@@ -82,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
     render();
   });
 });
-// prettier-ignore
 
 document.addEventListener('keydown', (e) => {
   let moved = false;
