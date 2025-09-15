@@ -193,7 +193,7 @@ class Game {
 
     return filtered;
   }
-
+  // добав.
   #addRandomTile() {
     const empty = [];
 
